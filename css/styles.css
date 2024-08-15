@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*: before,
-*: after {
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -17,7 +17,7 @@ body {
 
 .container {
     width: 80%;
-    height: 1280px;
+	max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 18.75em;
+	height: 18.75rem;
 }
 
 .bg-navbar {
@@ -70,4 +70,145 @@ body {
     background-color: white;
     color: black;
     border-radius: 0.5em;
+}
+
+/* MAIN */
+
+.main {
+    background-color: white;
+    margin-top: -2rem;
+    border-radius: 0.3em;
+    padding: 0.3em;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* CARD */
+.card {
+    background-color: #8946a6;
+    color:white;
+    overflow: hidden;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 1em 0;
+    font-weight: 500;
+}
+
+.card-body p {
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+
+.btn-dark {
+    background-color: black;
+    color: white;
+}
+
+/* Nosotros */
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #2f2e2f;
+}
+
+.nosotros-col-img {
+    order: 2;
+    background-image: url(../assets/images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 350px;
+    width: 100%;
+}
+
+.nosotros-col-text{
+    order: 1;
+}
+
+.nosotros-body {
+    padding: 1em;
+    text-align: center;
+    color: white;
+}
+
+.nosotros-body h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nosotros-body p {
+    font-weight: 200;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #a63245;
+}
+
+.bg-footer {
+    background-color: #2f2f2f;
+    color: wheat;
+}
+
+.bg-footer p {
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 750px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-brand {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+    .tienda {
+        display: flex;
+        gap: 1em;
+    }
+    .nosotros {
+        flex-direction: row;
+    }
+    .nosotros-col-img {
+        order: 1;
+        flex: 1 1 0;
+    }
+    .nosotros-col-text {
+        order: 2;
+        flex: 1 1 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .nosotros-col-img {
+        height: 500px;
+    }
 }
